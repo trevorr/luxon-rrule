@@ -42,8 +42,8 @@ interface RecurringIntervalInfo extends RecurringInterval {
 
 type GenericIntervalInfo = Interval | RecurringIntervalInfo;
 
-function isRecurringIntervalInfo(v: any): v is RecurringIntervalInfo {
-  return (v.lastEnd == null || v.lastEnd instanceof DateTime) && isRecurringInterval(v);
+function isRecurringIntervalInfo(i: GenericIntervalInfo): i is RecurringIntervalInfo {
+  return !(i instanceof Interval);
 }
 
 function getIntervalEnd(i: GenericIntervalInfo): DateTime | null {

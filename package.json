@@ -1,6 +1,6 @@
 {
   "name": "luxon-rrule",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Luxon-based Recurring Interval Sets",
   "keywords": [
     "luxon",
